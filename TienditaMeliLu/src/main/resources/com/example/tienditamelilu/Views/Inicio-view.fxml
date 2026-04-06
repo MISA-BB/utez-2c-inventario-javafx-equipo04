@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.tienditamelilu.Controllers.InicioController"
+      prefHeight="400.0" prefWidth="600.0">
+
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+
+    <Label text="ID"/>
+    <TextField fx:id="txtId"/>
+    <Label text="Nombre"/>
+    <TextField fx:id="txtNombre"/>
+    <Label text="Stock"/>
+    <TextField fx:id="txtStock"/>
+    <Label text="Precio"/>
+    <TextField fx:id="txtPrecio"/>
+    <Label text="Categoria"/>
+    <ComboBox fx:id="txtCategoria"/>
+    <TableView fx:id="tablaProductos" layoutX="20.0" layoutY="20.0" prefHeight="300.0" prefWidth="500.0">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" />
+            <TableColumn fx:id="colNombre" text="Nombre" />
+            <TableColumn fx:id="colStock" text="Stock" />
+            <TableColumn fx:id="colPrecio" text="Precio" />
+            <TableColumn fx:id="colCategoria" text="Categoría" />
+        </columns>
+    </TableView>
+
+    <Button text="Agregar" onAction="#Agregar"></Button>
+    <Button text="Eliminar" onAction="#Eliminar"></Button>
+    <Button text="Actualizar" onAction="#Actualizar"></Button>
+    <Button text="Buscar" onAction="#Buscar"></Button>
+
+
+
+
+</VBox>
