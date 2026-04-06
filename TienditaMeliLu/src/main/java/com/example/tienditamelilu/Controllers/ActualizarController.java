@@ -12,17 +12,27 @@ import javafx.stage.Stage;
 
 public class ActualizarController {
 
+    //representan los cuadritos de texto y botones que el usuario ve en la ventana
     @FXML private TextField txtId, txtNombre, txtStock, txtPrecio;
     @FXML private ComboBox<String> txtCategoria;
 
+    // Instancias de ayuda: uno para guardar en el archivo y otro para revisar que no haya errores
     private final ActualizarService service = new ActualizarService();
     private final ValidadorProducto validador = new ValidadorProducto();
 
+    /**
+     * initialize(): Se ejecuta automáticamente al abrir la ventana.
+     * Sirve para preparar los elementos visuales, como llenar las opciones del menú desplegable.
+     */
     @FXML
     public void initialize() {
         txtCategoria.setItems(FXCollections.observableArrayList("Electronica", "Accesorios", "Mobiliario", "Otros"));
     }
 
+    /**
+     * cargarDatos(): Este método "rellena" el formulario con la info de un producto.
+     * Se usa cuando seleccionas algo en una tabla y le das a "Editar".
+     */
     public void cargarDatos(Producto p) {
         txtId.setText(String.valueOf(p.getId()));
         txtId.setEditable(false);
@@ -32,6 +42,9 @@ public class ActualizarController {
         txtCategoria.setValue(p.getCategoria());
     }
 
+    /**
+     * Actualizar(): Es el método principal. Se activa al presionar el botón "Actualizar".
+     */
     @FXML
     public void Actualizar() {
         // 1. Recolectamos todos los datos como String
@@ -41,17 +54,17 @@ public class ActualizarController {
         String precioStr = txtPrecio.getText();
         String categoria = txtCategoria.getValue();
 
-        // 2. Llamamos al validador (true porque es actualización)
+        // Mandamos al validador por si por si estan vacios o asi
         String mensajeError = validador.validar(idStr, nombre, stockStr, precioStr, categoria, true);
 
         if (mensajeError != null) {
-            // CORREGIDO: Ahora solo enviamos 2 argumentos
             mostrarAlerta("Error de validación", mensajeError);
             return;
         }
 
-        // 3. Conversión y guardado
+        // Aqui nos ayuda con atrapar los errores y asi para que no se rompa
         try {
+            // Convertimos los textos a numero reales, para crear el objeto producto
             Producto p = new Producto(
                     Integer.parseInt(idStr),
                     nombre,
@@ -60,21 +73,20 @@ public class ActualizarController {
                     categoria
             );
 
+            //Le pedimos al Service que busque este producto en el CSV y lo reemplace
             if (service.actualizar(p)) {
-                // CORREGIDO: Ahora solo enviamos 2 argumentos
                 mostrarAlerta("Éxito", "Producto actualizado correctamente.");
                 Cerrar();
             } else {
-                // CORREGIDO: Ahora solo enviamos 2 argumentos
                 mostrarAlerta("Error", "No se pudo encontrar el producto para actualizar.");
             }
         } catch (NumberFormatException e) {
-            // CORREGIDO: Ahora solo enviamos 2 argumentos
+            // Si el usuario puso letras en el precio o stock, esta parte "atrapa" el error
             mostrarAlerta("Error de formato", "Verifica que los datos numéricos sean correctos.");
         }
     }
 
-    // Tu método de 2 argumentos (déjalo así)
+    // crea y muestra una ventana de alerta
     private void mostrarAlerta(String titulo, String msg) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(titulo);
@@ -83,6 +95,7 @@ public class ActualizarController {
         alert.showAndWait();
     }
 
+    //cierra el formulario
     @FXML
     public void Cerrar() {
         Stage stage = (Stage) txtId.getScene().getWindow();

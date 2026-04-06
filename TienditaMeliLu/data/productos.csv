@@ -1,6 +1,7 @@
 id,nombre,stock,precio,categoria
-2,Mouse Inalambrico RGB,45,25.99,Accesorios
-3,Monitor 4K 27 pulgadas,10,349.0,Electronica
-4,Teclado Mecanico,30,85.5,Accesorios
-5,Silla Ergonomica,12,180.0,Mobiliario
-10,errds,8,5.0,Electrónica
+1,Alpura,15,25.00,Lácteos y Huevos
+2,Coca Cola,13,30.00,Bebidas y Refrescos
+3,Jamon Fud,7,25.00,Salchichonería
+4,Cloro,23,20.00,Limpieza del Hogar
+5,Agua Mineral,13,23.00,Bebidas y Refrescos
+6,Dona Chocolate,4,13.00,Panadería

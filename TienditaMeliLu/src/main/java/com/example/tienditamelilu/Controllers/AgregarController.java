@@ -31,11 +31,17 @@ public class AgregarController {
     public void initialize(){
 
         ObservableList<String> categorias = FXCollections.observableArrayList(
-                "Electrónica",
-                "Línea Blanca",
-                "Accesorios",
-                "Mobiliario",
-                "Papelería",
+                "Lácteos y Huevos",
+                "Salchichonería",
+                "Panadería",
+                "Abarrotes",
+                "Bebidas y Refrescos",
+                "Botanas",
+                "Frutas y Verduras",
+                "Limpieza del Hogar",
+                "Cuidado Personal",
+                "Cervecería y Vinos",
+                "Dulcería",
                 "Otros"
         );
 
