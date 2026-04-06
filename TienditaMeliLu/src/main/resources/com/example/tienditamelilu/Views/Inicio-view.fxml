@@ -20,12 +20,6 @@
     <TextField fx:id="txtId"/>
     <Label text="Nombre"/>
     <TextField fx:id="txtNombre"/>
-    <Label text="Stock"/>
-    <TextField fx:id="txtStock"/>
-    <Label text="Precio"/>
-    <TextField fx:id="txtPrecio"/>
-    <Label text="Categoria"/>
-    <ComboBox fx:id="txtCategoria"/>
     <TableView fx:id="tablaProductos" layoutX="20.0" layoutY="20.0" prefHeight="300.0" prefWidth="500.0">
         <columns>
             <TableColumn fx:id="colId" text="ID" />
@@ -36,12 +30,10 @@
         </columns>
     </TableView>
 
+    <HBox>
     <Button text="Agregar" onAction="#Agregar"></Button>
     <Button text="Eliminar" onAction="#Eliminar"></Button>
     <Button text="Actualizar" onAction="#Actualizar"></Button>
     <Button text="Buscar" onAction="#Buscar"></Button>
-
-
-
-
+    </HBox>
 </VBox>
