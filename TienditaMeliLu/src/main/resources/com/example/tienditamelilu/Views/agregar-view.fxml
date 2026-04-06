@@ -24,7 +24,7 @@
     <ComboBox fx:id="txtCategoria"/>
 
     <HBox>
-        <Button text="Eliminar" onAction="#Cerrar"></Button>
+        <Button text="Cerrar" onAction="#Cerrar"></Button>
         <Button text="Agregar" onAction="#Agregar"></Button>
     </HBox>
 

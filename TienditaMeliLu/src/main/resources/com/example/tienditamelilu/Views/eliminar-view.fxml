@@ -15,11 +15,10 @@
     <TextField fx:id="txtId"/>
     <Label text="Nombre"/>
     <TextField fx:id="txtNombre"/>
-    <Label text="Stock"/>
 
     <HBox>
-        <Button text="Eliminar" onAction="#Cerrar"></Button>
-        <Button text="Agregar" onAction="#Agregar"></Button>
+        <Button text="Eliminar" onAction="#eliminar"></Button>
+        <Button text="Cerrar" onAction="#Cerrar"></Button>
     </HBox>
 
 </VBox>
