@@ -15,7 +15,7 @@ public class BuscarService {
         List<Producto> resultados = new ArrayList<>();
         List<Producto> todos = obtenerTodos();
 
-        String idB = idBusqueda.trim().toLowerCase();
+        String idB = idBusqueda.trim().toLowerCase();//todos los casos a minusculas
         String nomB = nombreBusqueda.trim().toLowerCase();
 
         for (Producto p : todos) {

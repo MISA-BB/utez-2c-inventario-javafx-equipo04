@@ -47,7 +47,7 @@ public class ActualizarController {
      */
     @FXML
     public void Actualizar() {
-        // 1. Recolectamos todos los datos como String
+        //  Recolectamos todos los datos como String
         String idStr = txtId.getText();
         String nombre = txtNombre.getText();
         String stockStr = txtStock.getText();

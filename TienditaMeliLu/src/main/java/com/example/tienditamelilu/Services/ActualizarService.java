@@ -13,6 +13,7 @@ public class ActualizarService {
         List<Producto> lista = obtenerTodos();
         boolean encontrado = false;
 
+        // busca si esta el id
         for (int i = 0; i < lista.size(); i++) {
             if (lista.get(i).getId() == pModificado.getId()) {
                 lista.set(i, pModificado);

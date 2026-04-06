@@ -96,6 +96,7 @@ public class InicioController {
         stage.setScene(scene);
 
         stage.showAndWait();
+        //wait (un esperaaa,ella no te ama, como yo te amo xdxd)
 
         refrescarTabla();
     }

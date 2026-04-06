@@ -52,17 +52,12 @@ public class Producto {
         return precio;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
-    }
+
 
     public String getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
 
     // Método opcional para imprimir el objeto (útil para pruebas en consola)
     @Override
