@@ -1,0 +1,11 @@
+id,nombre,stock,precio,categoria
+1,Alpura,15,25.0,Lácteos y Huevos
+2,Coca Cola,13,30.0,Bebidas y Refrescos
+3,Jamon Fud,7,25.0,Salchichonería
+4,Cloro,23,20.0,Limpieza del Hogar
+5,Agua Mineral,13,23.0,Bebidas y Refrescos
+6,Dona Chocolate,4,13.0,Panadería
+66,huevos,67,2.5,Lácteos y Huevos
+67,chetos,0,0.0,Dulcería
+88,Aceite,25,23.0,Abarrotes
+15,Corona,6,235.0,Cervecería y Vinos

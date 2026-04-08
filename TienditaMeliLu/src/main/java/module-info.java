@@ -9,4 +9,6 @@ module com.example.tienditamelilu {
     exports com.example.tienditamelilu.Controllers;
     opens com.example.tienditamelilu.Services to javafx.fxml;
     exports com.example.tienditamelilu.Services;
+    opens com.example.tienditamelilu.Models to javafx.fxml;
+    exports com.example.tienditamelilu.Models;
 }
