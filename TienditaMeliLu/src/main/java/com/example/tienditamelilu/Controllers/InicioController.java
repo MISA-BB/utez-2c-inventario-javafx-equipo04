@@ -129,7 +129,11 @@ public class InicioController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/tienditamelilu/Views/actualizar-view.fxml"));
         Scene scene = new Scene(loader.load());
 
+        // 1. Obtenemos el control sobre la clase controladora de la nueva ventana
         ActualizarController controller = loader.getController();
+
+// 2. Le enviamos el objeto 'seleccionado' (el producto que tocaste en la tabla)
+// para que la nueva ventana se llene con sus datos
         controller.cargarDatos(seleccionado);
 
         Stage stage = new Stage();

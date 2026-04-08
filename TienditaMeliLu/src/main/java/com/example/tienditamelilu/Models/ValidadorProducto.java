@@ -5,6 +5,7 @@ import java.util.List;
 
 public class ValidadorProducto {
 
+    // Crea una copia privada e inalterable de la herramienta de búsqueda para usarla en esta clase
     private final BuscarService buscarService = new BuscarService();
 
     public String validar(String id, String nombre, String stock, String precio, String categoria, boolean esActualizacion) {

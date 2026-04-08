@@ -17,7 +17,7 @@
             </padding>
 
     <Label text="ID"/>
-    <TextField fx:id="txtId" /> // style="-fx-text-fill: red"
+    <TextField fx:id="txtId" />
     <Label text="Nombre"/>
     <TextField fx:id="txtNombre"/>
     <TableView fx:id="tablaProductos" layoutX="20.0" layoutY="20.0" prefHeight="300.0" prefWidth="500.0">
